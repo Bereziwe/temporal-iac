@@ -1,0 +1,7 @@
+
+- name: Trigger Temporal Workflow
+  run: |
+    temporal workflow start \
+      --task-queue azure-deployments \
+      --workflow-type DeployAzureInfraWorkflow \
+      --input '"./azure-infra"'
