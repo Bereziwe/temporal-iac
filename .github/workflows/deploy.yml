@@ -1,7 +1,30 @@
 
-- name: Trigger Temporal Workflow
-  run: |
-    temporal workflow start \
-      --task-queue azure-deployments \
-      --workflow-type DeployAzureInfraWorkflow \
-      --input '"./azure-infra"'
+
+# .github/workflows/deploy.yml
+name: Deploy Terraform via Temporal
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Install dependencies
+        run: go mod tidy
+
+      - name: Start Temporal Workflow
+        run: go run client/start.go
+        env:
+          TEMPORAL_ADDRESS: http://20.106.237.42:8080/
+
