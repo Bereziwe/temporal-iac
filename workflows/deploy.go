@@ -4,8 +4,8 @@ package workflows
 // import "github.com/yourusername/temporal-iac/activities"
 
 import (
-    "github.com/yourusername/temporal-iac/activities"
-    "github.com/yourusername/temporal-iac/workflows"
+    "github.com/Bereziwe/temporal-iac/activities"
+    "github.com/Bereziwe/temporal-iac/workflows"
 )
 
 // import (
