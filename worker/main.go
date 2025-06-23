@@ -3,7 +3,7 @@ package main
 
 
 import (
-"github.com/Bereziwe/temporal-terraform/workflows"
+"https://github.com/Bereziwe/temporal-iac.git"
 "log"
 "your_project/activities"
 "your_project/workflows"
