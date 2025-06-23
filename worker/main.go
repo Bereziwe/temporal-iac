@@ -3,7 +3,8 @@ package main
 
 
 import (
-"github.com/Bereziwe/temporal-iac"
+"../temporal-iac"
+// "github.com/Bereziwe/temporal-iac"
 "log"
 "your_project/activities"
 "your_project/workflows"
