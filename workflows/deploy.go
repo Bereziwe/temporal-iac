@@ -2,6 +2,7 @@
 package workflows
 
 import (
+"github.com/yourusername/temporal-iac/workflows"
 "go.temporal.io/sdk/workflow"
 "temporal-iac/activities"
 "time"

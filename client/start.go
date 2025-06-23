@@ -2,8 +2,9 @@
 package main
 
 import (
-"github.com/Bereziwe/temporal-iac/workflows"
+"github.com/Bereziwe/temporal-iac/activities"
 "log"
+"temporal-iac/activities"
 "temporal-iac/workflows"
 "go.temporal.io/sdk/client"
 )
