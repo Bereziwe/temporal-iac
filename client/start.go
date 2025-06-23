@@ -1,10 +1,8 @@
 // client/start.go
 package main
 
-"github.com/yourusername/temporal-terraform/workflows"
-
 import (
-"github.com/yourusername/temporal-terraform/workflows"
+"github.com/Bereziwe/temporal-terraform/workflows"
 "log"
 "your_project/workflows"
 "go.temporal.io/sdk/client"
