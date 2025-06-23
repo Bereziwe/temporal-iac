@@ -1,4 +1,4 @@
-module github.com/yourname/temporal-terraform
+module github.com/Bereziwe/temporal-iac.git
 
 go 1.21
 
