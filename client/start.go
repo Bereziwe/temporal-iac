@@ -2,7 +2,7 @@
 package main
 
 import (
-"github.com/Bereziwe/temporal-iac"
+"github.com/Bereziwe/temporal-iac/workflows"
 "log"
 "your_project/workflows"
 "go.temporal.io/sdk/client"
