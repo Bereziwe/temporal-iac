@@ -1,13 +1,15 @@
 // client/start.go
 package main
 
-import (
-"github.com/Bereziwe/temporal-iac/activities"
-"log"
-"temporal-iac/activities"
-"temporal-iac/workflows"
-"go.temporal.io/sdk/client"
-)
+import "temporal-iac/activities"
+
+// import (
+// "temporal-iac/activities"
+// "log"
+// // "temporal-iac/activities"
+// "temporal-iac/workflows"
+// "go.temporal.io/sdk/client"
+// )
 
 func main() {
 c, err := client.Dial(client.Options{
