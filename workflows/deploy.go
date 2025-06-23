@@ -3,7 +3,7 @@ package workflows
 
 import (
 "go.temporal.io/sdk/workflow"
-"your_project/activities"
+"temporal-iac/activities"
 "time"
 )
 

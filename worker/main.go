@@ -5,8 +5,8 @@ package main
 import (
 "github.com/Bereziwe/temporal-iac/workflows"
 "log"
-"your_project/activities"
-"your_project/workflows"
+"temporal-iac/activities"
+"temporal-iac/workflows"
 "go.temporal.io/sdk/client"
 "go.temporal.io/sdk/worker"
 )
