@@ -3,8 +3,7 @@ package main
 
 
 import (
-"../temporal-iac"
-// "github.com/Bereziwe/temporal-iac"
+"github.com/Bereziwe/temporal-iac"
 "log"
 "your_project/activities"
 "your_project/workflows"
@@ -14,7 +13,7 @@ import (
 
 func main() {
 c, err := client.Dial(client.Options{
-HostPort: "localhost:7233", // your Temporal server
+HostPort: "20.106.237.42:8080/", // your Temporal server
 })
 if err != nil {
 log.Fatalln("unable to create client", err)

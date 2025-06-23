@@ -2,8 +2,7 @@
 package main
 
 import (
-"../temporal-iac"
-// "github.com/Bereziwe/temporal-iac"
+"github.com/Bereziwe/temporal-iac"
 "log"
 "your_project/workflows"
 "go.temporal.io/sdk/client"
@@ -11,7 +10,7 @@ import (
 
 func main() {
 c, err := client.Dial(client.Options{
-HostPort: "localhost:7233",
+HostPort: "20.106.237.42:8080/",
 })
 if err != nil {
 log.Fatalln("unable to create client", err)
