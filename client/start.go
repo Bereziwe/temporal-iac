@@ -1,8 +1,7 @@
 // client/start.go
 package main
-
-import "temporal-iac/activities"
-
+// import "temporal-iac/activities"
+import "github.com/Bereziwe/temporal-iac/activities"
 // import (
 // "temporal-iac/activities"
 // "log"
