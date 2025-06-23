@@ -1,4 +1,4 @@
-go get github.com/Bereziwe/temporal-iac@v0.1.0           
+module github.com/Bereziwe/temporal-iac@v0.1.0           
 
 go 1.21
 
