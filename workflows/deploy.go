@@ -4,11 +4,16 @@ package workflows
 // import "github.com/yourusername/temporal-iac/activities"
 
 import (
-"temporal-iac/workflows"
-"go.temporal.io/sdk/workflow"
-"temporal-iac/activities"
-"time"
+    "github.com/yourusername/temporal-iac/activities"
+    "github.com/yourusername/temporal-iac/workflows"
 )
+
+// import (
+// "temporal-iac/workflows"
+// "go.temporal.io/sdk/workflow"
+// "temporal-iac/activities"
+// "time"
+// )
 
 func DeployTerraformWorkflow(ctx workflow.Context) error {
 opts := workflow.ActivityOptions{
