@@ -1,5 +1,4 @@
 module ../temporal-iac           
-<!-- github.com/Bereziwe/temporal-iac -->
 
 go 1.21
 
