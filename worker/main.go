@@ -4,6 +4,7 @@ package main
 
 import (
 "github.com/Bereziwe/temporal-iac/workflows"
+"github.com/Bereziwe/temporal-iac/worker"
 "log"
 "temporal-iac/activities"
 "temporal-iac/workflows"
@@ -20,7 +21,7 @@ log.Fatalln("unable to create client", err)
 }
 defer c.Close()
 
-w := worker.New(c, "terraform-task-queue", worker.Options{})
+w := worker.New(c, "terraform-task", worker.Options{})
 w.RegisterActivity(workflows.RunTerraformActivity)
 w.RegisterWorkflow(workflows.DeployTerraformWorkflow)
 w.RegisterActivity(activities.InitTerraform)
