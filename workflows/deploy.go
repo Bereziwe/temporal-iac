@@ -5,7 +5,7 @@ package workflows
 
 import (
     "github.com/Bereziwe/temporal-iac/activities"
-    "github.com/Bereziwe/temporal-iac/workflows"
+    // "github.com/Bereziwe/temporal-iac/workflows"
 )
 
 // import (
