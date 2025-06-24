@@ -21,6 +21,7 @@ log.Fatalln("unable to create client", err)
 defer c.Close()
 
 w := worker.New(c, "terraform-task-queue", worker.Options{})
+w.RegisterActivity(workflows.RunTerraformActivity)
 w.RegisterWorkflow(workflows.DeployTerraformWorkflow)
 w.RegisterActivity(activities.InitTerraform)
 w.RegisterActivity(activities.PlanTerraform)
