@@ -5,6 +5,7 @@ package workflows
 
 import (
     "github.com/Bereziwe/temporal-iac/activities"
+	"go.temporal.io/sdk/workflow"
     // "github.com/Bereziwe/temporal-iac/workflows"
 )
 
