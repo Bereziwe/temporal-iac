@@ -22,7 +22,7 @@ import (
 
 func main() {
 c, err := client.Dial(client.Options{
-HostPort: "172.172.245.99:7233/",
+HostPort: "172.172.245.99:7233",
 })
 if err != nil {
 log.Fatalln("unable to create client", err)
