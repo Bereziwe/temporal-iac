@@ -6,8 +6,6 @@ import (
 "github.com/Bereziwe/temporal-iac/workflows"
 "github.com/Bereziwe/temporal-iac/worker"
 "log"
-"temporal-iac/activities"
-"temporal-iac/workflows"
 "go.temporal.io/sdk/client"
 "go.temporal.io/sdk/worker"
 )
