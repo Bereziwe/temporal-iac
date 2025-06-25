@@ -30,7 +30,7 @@ log.Fatalln("unable to create client", err)
 defer c.Close()
 
 workflowOptions := client.StartWorkflowOptions{
-ID:        "terraform-deploy-workflow",
+ID:        "terraform-deploy",
 TaskQueue: "terraform-task",
 }
 
