@@ -5,20 +5,8 @@ import (
     "context"
     "log"
     "go.temporal.io/sdk/client"
-	// "go.temporal.io/sdk/worker"
     "github.com/Bereziwe/temporal-iac/workflows"
 )
-
-// package main
-// import "temporal-iac/activities"
-// import "github.com/Bereziwe/temporal-iac/activities"
-// import (
-// "temporal-iac/activities"
-// "log"
-// // "temporal-iac/activities"
-// "temporal-iac/workflows"
-// "go.temporal.io/sdk/client"
-// )
 
 func main() {
 c, err := client.Dial(client.Options{
@@ -30,7 +18,7 @@ log.Fatalln("unable to create client", err)
 defer c.Close()
 
 workflowOptions := client.StartWorkflowOptions{
-ID:        "terraform-deploy4",
+ID:        "terraform-deploy5",
 TaskQueue: "terraform-task",
 }
 
