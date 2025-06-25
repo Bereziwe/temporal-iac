@@ -14,13 +14,16 @@ import (
 
 func main() {
 c, err := client.Dial(client.Options{
-HostPort: "172.172.245.99:7233", // your Temporal server
+	    Namespace: "default"
+        HostPort: "172.172.245.99:7233", // your Temporal server
 })
 if err != nil {
 log.Fatalln("unable to create client", err)
 }
 defer c.Close()
-
+temporalWorker := worker.new(serviceClient, "terraform-task", worker.Options{
+	WorkerStopTimeout: 30 * time.Second,
+})
 w := worker.New(c, "terraform-task", worker.Options{})
 w.RegisterActivity(workflows.RunTerraformActivity)
 w.RegisterWorkflow(workflows.DeployTerraformWorkflow)
