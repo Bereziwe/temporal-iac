@@ -23,7 +23,7 @@ func main() {
     }
 
     // Start the workflow
-    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, workflows.MyWorkflow, "Hello from starter.go!")
+    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, MyWorkflow, "Hello from starter.go!")
     if err != nil {
         log.Fatalln("Unable to execute workflow", err)
     }
