@@ -1,4 +1,4 @@
-module temporal-app
+module github.com/Bereziwe/temporal-iac
 
 go 1.20
 
