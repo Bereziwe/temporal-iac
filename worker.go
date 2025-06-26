@@ -19,7 +19,7 @@ func main() {
 
     w.RegisterWorkflow(DeployTerraformWorkflow)
     w.RegisterActivity(TerraformApply)
-	w.RegisterActivity(TerraformInit)
+	// w.RegisterActivity(TerraformInit)
 
     log.Println("Worker started for task queue: terraform-task2")
     err = w.Run(worker.InterruptCh())
