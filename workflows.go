@@ -1,35 +1,23 @@
-// workflows/deploy.go
-package workflows
-
-// import "github.com/yourusername/temporal-iac/activities"
+package main
 
 import (
-    // "github.com/Bereziwe/temporal-iac/activities"
-	"go.temporal.io/sdk/workflow"
-	"time"
-    // "github.com/Bereziwe/temporal-iac/workflows"
+    "go.temporal.io/sdk/workflow"
+    "time"
 )
 
-// import (
-// "temporal-iac/workflows"
-// "go.temporal.io/sdk/workflow"
-// "temporal-iac/activities"
-// "time"
-// )
+func TerraformWorkflow(ctx workflow.Context, config string) (string, error) {
+    ao := workflow.ActivityOptions{
+        StartToCloseTimeout: time.Minute,
+    }
+    ctx = workflow.WithActivityOptions(ctx, ao)
 
-func DeployTerraformWorkflow(ctx workflow.Context) error {
-opts := workflow.ActivityOptions{
-StartToCloseTimeout: time.Minute * 10,
-}
-ctx = workflow.WithActivityOptions(ctx, opts)
+    var result string
+    err := workflow.ExecuteActivity(ctx, TerraformApply, config).Get(ctx, &result)
+    if err != nil {
+        return "", err
+    }
 
-err := workflow.ExecuteActivity(ctx, activities.InitTerraform).Get(ctx, nil)
-if err != nil {
-return err
+    return result, nil
 }
-err = workflow.ExecuteActivity(ctx, activities.PlanTerraform).Get(ctx, nil)
-if err != nil {
-return err
-}
-return workflow.ExecuteActivity(ctx, activities.ApplyTerraform).Get(ctx, nil)
-}
+
+

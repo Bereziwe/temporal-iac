@@ -1,24 +1,12 @@
-// activities/terraform.go
-package activities
+package main
 
 import (
-"os/exec"
+    "context"
+    "fmt"
 )
 
-func InitTerraform() error {
-cmd := exec.Command("terraform", "init")
-cmd.Dir = "./terraform"
-return cmd.Run()
-}
-
-func PlanTerraform() error {
-cmd := exec.Command("terraform", "plan", "-out=tfplan")
-cmd.Dir = "./terraform"
-return cmd.Run()
-}
-
-func ApplyTerraform() error {
-cmd := exec.Command("terraform", "apply", "-auto-approve", "tfplan")
-cmd.Dir = "./terraform"
-return cmd.Run()
+func TerraformApply(ctx context.Context, config string) (string, error) {
+    fmt.Println("Executing Terraform with config:", config)
+    // Simulate Terraform logic or call out to scripts/binaries
+    return "Terraform apply complete for config: " + config, nil
 }
