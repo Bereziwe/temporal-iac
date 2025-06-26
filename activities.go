@@ -6,10 +6,16 @@ import (
 )
 
 
-func InitTerraform() error {
-cmd := exec.Command("terraform", "init")
-cmd.Dir = "./terraform"
-return cmd.Run()
+func TerraformInitActivity(ctx context.Context) error {
+    cmd := exec.Command("terraform", "init")
+    cmd.Dir = "./terraform" // Replace with your actual path
+
+    output, err := cmd.CombinedOutput()
+    if err != nil {
+        return fmt.Errorf("terraform init failed: %v\nOutput: %s", err, string(output))
+    }
+
+    return nil
 }
 
 func TerraformApply(ctx context.Context, config string) (string, error) {
