@@ -5,7 +5,7 @@ import (
     "time"
 )
 
-func DeployTerraformWorkflow(ctx workflow.Context, config string) (string, error) {
+func TerraformWorkflow(ctx workflow.Context, config string) (string, error) {
     ao := workflow.ActivityOptions{
         StartToCloseTimeout: time.Minute,
     }
