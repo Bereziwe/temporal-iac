@@ -8,7 +8,7 @@ import (
 
 func main() {
     c, err := client.NewClient(client.Options{
-		HostPort: "172.172.245.99:7233"
+		HostPort: "172.172.245.99:7233",
 	})
     if err != nil {
         log.Fatalln("Unable to create Temporal client", err)
