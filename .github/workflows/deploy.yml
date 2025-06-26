@@ -24,8 +24,8 @@ jobs:
         run: go mod tidy
 
       - name: Start Temporal Workflow
-        run: nohup go run worker.go activities.go workflows.go > worker.log 2>&1 &
-        
+        run: nohup go run worker.go activities.go workflows.go       
+##> worker.log 2>&1 &      
 #timeout 120s go run worker.go activities.go workflows.go
 #  go run client/start.go     
         env:
