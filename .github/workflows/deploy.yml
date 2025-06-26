@@ -24,7 +24,7 @@ jobs:
         run: go mod tidy
 
       - name: Start Temporal Workflow
-        run: go run worker.go activities.go workflows.go
+        run: timeout 10s go run worker.go activities.go workflows.go
 #  go run client/start.go     
         env:
           TEMPORAL_ADDRESS: http://172.172.245.99:7233
