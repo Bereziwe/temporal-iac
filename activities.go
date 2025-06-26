@@ -7,7 +7,7 @@ import (
 )
 
 
-func TerraformInitActivity(ctx context.Context) error {
+func TerraformInit(ctx context.Context) error {
     cmd := exec.Command("terraform", "init")
 	cmd.Dir = "/home/runner/work/temporal-iac/temporal-iac/terraform"
     // cmd.Dir = "./terraform" // Replace with your actual path
