@@ -4,7 +4,7 @@ package workflows
 // import "github.com/yourusername/temporal-iac/activities"
 
 import (
-    "github.com/Bereziwe/temporal-iac/activities"
+    // "github.com/Bereziwe/temporal-iac/activities"
 	"go.temporal.io/sdk/workflow"
 	"time"
     // "github.com/Bereziwe/temporal-iac/workflows"

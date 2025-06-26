@@ -3,8 +3,8 @@ package main
 
 
 import (
-"github.com/Bereziwe/temporal-iac/workflows"
-"github.com/Bereziwe/temporal-iac/worker"
+// "github.com/Bereziwe/temporal-iac/workflows"
+// "github.com/Bereziwe/temporal-iac/worker"
 "log"
 "go.temporal.io/sdk/client"
 "go.temporal.io/sdk/worker"
