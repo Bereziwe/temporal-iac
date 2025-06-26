@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: go mod tidy
 
+      - name: Start Workflow
+        run: go run starter.go
+
       - name: Start Temporal Workflow
         run: go run worker.go activities.go workflows.go 
   ##> worker.log 2>&1 &      
