@@ -21,7 +21,6 @@ func main() {
     workflowOptions := client.StartWorkflowOptions{
         ID:        "my_workflow_id",
         TaskQueue: "terraform-task2",
-        Timeout:   time.Minute * 10,
     }
 
     // Start the workflow
