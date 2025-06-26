@@ -6,7 +6,7 @@ import (
     "time"
 
     "go.temporal.io/sdk/client"
-    "your/module/path/workflows" // Replace with the actual module path
+    // "your/module/path/workflows" // Replace with the actual module path
 )
 
 func main() {
