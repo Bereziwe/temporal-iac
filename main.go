@@ -1,6 +1,7 @@
 package main
 
 import (
+    "context"
     "go.temporal.io/sdk/client"
     "log"
 )
@@ -16,7 +17,7 @@ func main() {
         TaskQueue: "terraform-task2",
     }
 
-    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, YourWorkflowFunctionName)
+    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, TerraformWorkflow)
     if err != nil {
         log.Fatalln("Unable to execute workflow", err)
     }
