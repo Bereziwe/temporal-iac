@@ -1,8 +1,9 @@
 package main
 
 import (
-    "context"
-    "fmt"
+    // "context"
+    // "fmt"
+    "os/exec"
 )
 
 func TerraformApply() error {
