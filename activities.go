@@ -11,7 +11,7 @@ package main
 import (
     "context"
     "log"
-
+    "os/exec"
     "go.temporal.io/sdk/client"
 )
 
