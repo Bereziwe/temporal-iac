@@ -19,7 +19,7 @@ func main() {
         TaskQueue: "terraform-task2",
     }
 
-    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, DeployTerraformApply)
+    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, TerraformApply)
     if err != nil {
         log.Fatalln("Unable to execute workflow", err)
     }
