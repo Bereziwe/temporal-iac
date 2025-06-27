@@ -2,6 +2,7 @@ package main
 
 import (
     "context"
+    "go.temporal.io/sdk/worker"
     "go.temporal.io/sdk/client"
     "log"
 )
@@ -17,7 +18,7 @@ func main() {
 
     w := worker.New(c, "terraform-task10", worker.Options{})
 
-    w.RegisterWorkflow(TerraformWorkflow)
+    // w.RegisterWorkflow(TerraformWorkflow)
     w.RegisterActivity(TerraformApply)
 	// w.RegisterActivity(TerraformInit)
 
