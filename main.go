@@ -15,6 +15,12 @@ func main() {
     }
     defer c.Close()
 
+    w := worker.New(c, "terraform-task10", worker.Options{})
+
+    w.RegisterWorkflow(TerraformWorkflow)
+    w.RegisterActivity(TerraformApply)
+	// w.RegisterActivity(TerraformInit)
+
     workflowOptions := client.StartWorkflowOptions{
         TaskQueue: "terraform-task10",
     }
