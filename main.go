@@ -19,7 +19,7 @@ func main() {
         TaskQueue: "terraform-task2",
     }
 
-    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, TerraformApply)
+    we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, TerraformApply, "/home/runner/work/temporal-iac/temporal-iac/terraform")
     if err != nil {
         log.Fatalln("Unable to execute workflow", err)
     }
