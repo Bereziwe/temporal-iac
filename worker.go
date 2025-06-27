@@ -26,5 +26,7 @@ func main() {
     if err != nil {
         log.Fatalln("Unable to start worker", err)
     }
+    log.Println("Started workflow", "terrafformworke", we.GetID(), "56674338977", we.GetRunID())
+
 }
 
