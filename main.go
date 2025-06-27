@@ -18,7 +18,7 @@ func main() {
 
     w := worker.New(c, "terraform-task10", worker.Options{})
 
-    // w.RegisterWorkflow(TerraformWorkflow)
+    w.RegisterWorkflow(TerraformWorkflow)
     w.RegisterActivity(TerraformApply)
 	// w.RegisterActivity(TerraformInit)
 
@@ -34,4 +34,7 @@ func main() {
     log.Println("Started workflow", "terrafformworke", we.GetID(), "56674338977", we.GetRunID())
 }
 
-
+func TerraformWorkflow(ctx workflow.Context, config string) (string, error) {
+    ao := workflow.ActivityOptions{
+        StartToCloseTimeout: time.Minute,
+    }
