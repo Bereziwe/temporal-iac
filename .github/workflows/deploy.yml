@@ -27,10 +27,7 @@ jobs:
       #   run: go run starter.go
 
       - name: Start Temporal Workflow
-        run: go run activities.go 
-  ##> worker.log 2>&1 &      
-#timeout 120s go run worker.go activities.go workflows.go
-#  go run client/start.go     
+        run: go run activities.go main.go   
         env:
           TEMPORAL_ADDRESS: http://172.172.245.99:8080
 
