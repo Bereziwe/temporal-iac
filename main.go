@@ -38,3 +38,4 @@ func TerraformWorkflow(ctx workflow.Context, config string) (string, error) {
     ao := workflow.ActivityOptions{
         StartToCloseTimeout: time.Minute,
     }
+}
