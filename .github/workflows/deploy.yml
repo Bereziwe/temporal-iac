@@ -27,7 +27,9 @@ jobs:
       #   run: go run starter.go
 
       - name: Start Temporal Workflow
-        run: go run worker.go activities.go workflows.go 
+        run: |  
+          nohup go run worker.go activities.go workflows.go > worker.log 2>&1 &
+          sleep 5
 
       - name: Start the Workflow
         run: go run activities.go workflows.go   
