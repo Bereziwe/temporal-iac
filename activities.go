@@ -20,7 +20,7 @@ func main() {
 
     w := worker.New(c, "terraform-task2", worker.Options{})
 
-    w.RegisterWorkflow(TerraformWorkflow)
+    // w.RegisterWorkflow(TerraformWorkflow)
     w.RegisterActivity(DeployTerraformApply)
 	// w.RegisterActivity(TerraformInit)
 
