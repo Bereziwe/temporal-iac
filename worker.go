@@ -15,7 +15,7 @@ func main() {
     }
     defer c.Close()
 
-    w := worker.New(c, "terraform-task", worker.Options{})
+    w := worker.New(c, "terraform-task11", worker.Options{})
 
     w.RegisterWorkflow(TerraformWorkflow)
     w.RegisterActivity(TerraformApply)
