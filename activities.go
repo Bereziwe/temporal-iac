@@ -18,7 +18,7 @@ import (
 //     return nil
 // }
 
-func DeployTerraformApply(ctx workflow.Context, config string) (string, error) {
+func TerraformApply(ctx workflow.Context, config string) (string, error) {
     fmt.Println("Executing Terraform with config:", config)
     // Simulate Terraform logic or call out to scripts/binaries
     return "Terraform apply complete for config: " + config, nil
