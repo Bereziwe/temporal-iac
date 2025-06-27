@@ -41,7 +41,6 @@ func main() {
     log.Println("Started workflow", "WorkflowIDtest", we.GetID(), "RunID667877", we.GetRunID())
 }
 
-
 func TerraformApply() error {
 cmd := exec.Command("terraform", "apply", "-auto-approve", "tfplan")
 cmd.Dir = "./terraform"
