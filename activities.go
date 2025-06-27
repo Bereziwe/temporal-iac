@@ -5,7 +5,7 @@ import (
     "fmt"
 )
 
-func ApplyTerraform() error {
+func TerraformApply() error {
 cmd := exec.Command("terraform", "apply", "-auto-approve", "tfplan")
 cmd.Dir = "./terraform"
 return cmd.Run()
