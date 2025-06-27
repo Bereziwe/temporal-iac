@@ -12,7 +12,7 @@ func TerraformWorkflow(ctx workflow.Context, config string) (string, error) {
     ctx = workflow.WithActivityOptions(ctx, ao)
 
     var result string
-    err := workflow.ExecuteActivity(ctx, TerraformApply, config).Get(ctx, &result)
+    err := workflow.ExecuteActivity(ctx, DeployTerraformApply, config).Get(ctx, &result)
     if err != nil {
         return "", err
     }
