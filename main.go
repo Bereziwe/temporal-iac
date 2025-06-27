@@ -16,7 +16,7 @@ func main() {
     defer c.Close()
 
     workflowOptions := client.StartWorkflowOptions{
-        TaskQueue: "terraform-task2",
+        TaskQueue: "terraform-task10",
     }
 
     we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, TerraformApply, "/home/runner/work/temporal-iac/temporal-iac/terraform")
