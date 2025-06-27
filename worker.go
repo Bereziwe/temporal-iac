@@ -8,25 +8,22 @@ import (
 
 func main() {
     c, err := client.NewClient(client.Options{
-		HostPort: "172.172.245.99:7233",
-	})
+        HostPort: "172.172.245.99:7233"
+    })
     if err != nil {
         log.Fatalln("Unable to create Temporal client", err)
     }
     defer c.Close()
 
-    w := worker.New(c, "terraform-task2", worker.Options{})
+    w := worker.New(c, "terraform-task", worker.Options{})
 
     w.RegisterWorkflow(TerraformWorkflow)
     w.RegisterActivity(TerraformApply)
-	// w.RegisterActivity(TerraformInit)
 
-    log.Println("Worker started for task queue: terraform-task2")
+    log.Println("Worker started for task queue: terraform-task")
     err = w.Run(worker.InterruptCh())
     if err != nil {
         log.Fatalln("Unable to start worker", err)
     }
-    log.Println("Started workflow", "terrafformworke", we.GetID(), "56674338977", we.GetRunID())
-
 }
 
