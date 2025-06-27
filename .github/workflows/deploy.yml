@@ -28,11 +28,11 @@ jobs:
 
       - name: Start Temporal Workflow
         run: |  
-          nohup go run worker.go activities.go workflows.go > worker.log 2>&1 &
+          nohup go run worker.go worker.log 2>&1 &
           sleep 5
 
       - name: Start the Workflow
-        run: go run worker.go activities.go workflows.go   
+        run: go run activities.go workflows.go   
         env:
           TEMPORAL_ADDRESS: http://172.172.245.99:8080
 
