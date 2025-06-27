@@ -21,7 +21,7 @@ func main() {
     w := worker.New(c, "terraform-task2", worker.Options{})
 
     w.RegisterWorkflow(TerraformWorkflow)
-    w.RegisterActivity(TerraformApply)
+    w.RegisterActivity(DeployTerraformApply)
 	// w.RegisterActivity(TerraformInit)
 
     log.Println("Worker started for task queue: terraform-task2")
