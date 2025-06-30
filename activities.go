@@ -9,10 +9,10 @@
 package main
 
 import (
-    "context"
-    "log"
+    // "context"
+    // "log"
     "os/exec"
-    "go.temporal.io/sdk/client"
+    // "go.temporal.io/sdk/client"
 )
 
 // func main() {
