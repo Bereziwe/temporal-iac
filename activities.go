@@ -1,10 +1,3 @@
-// package main
-
-// import (
-//     // "context"
-//     // "fmt"
-//     "os/exec"
-// )
 
 package main
 
@@ -43,7 +36,7 @@ import (
 
 func TerraformApply() error {
 cmd := exec.Command("terraform", "apply", "-auto-approve", "tfplan")
-cmd.Dir = "./terraform"
+cmd.Dir = "github.com/Bereziwe/temporal-iac/terraform"
 return cmd.Run()
 }
 
