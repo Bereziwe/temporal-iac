@@ -25,5 +25,8 @@ func main() {
     if err != nil {
         log.Fatalln("Unable to start worker", err)
     }
+
+    log.Println("Started workflow", "WorkflowIDtest", we.GetID(), "RunID667877", we.GetRunID())
+
 }
 

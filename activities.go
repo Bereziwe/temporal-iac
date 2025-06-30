@@ -15,31 +15,31 @@ import (
     "go.temporal.io/sdk/client"
 )
 
-func main() {
-    c, err := client.NewClient(client.Options{
-        HostPort: "172.172.245.99:7233",
-    })
-    if err != nil {
-        log.Fatalln("Unable to create Temporal client", err)
-    }
-    defer c.Close()
+// func main() {
+//     c, err := client.NewClient(client.Options{
+//         HostPort: "172.172.245.99:7233",
+//     })
+//     if err != nil {
+//         log.Fatalln("Unable to create Temporal client", err)
+//     }
+//     defer c.Close()
 
-    workflowOptions := client.StartWorkflowOptions{
-        TaskQueue: "terraform-task11", // must match the worker's task queue
-    }
+//     workflowOptions := client.StartWorkflowOptions{
+//         TaskQueue: "terraform-task11", // must match the worker's task queue
+//     }
 
-    we, err := c.ExecuteWorkflow(
-        context.Background(),
-        workflowOptions,
-        TerraformWorkflow, // replace with your actual workflow function
-        "./terraform", // replace with actual argument if needed
-    )
-    if err != nil {
-        log.Fatalln("Unable to execute workflow", err)
-    }
+//     we, err := c.ExecuteWorkflow(
+//         context.Background(),
+//         workflowOptions,
+//         TerraformWorkflow, // replace with your actual workflow function
+//         "./terraform", // replace with actual argument if needed
+//     )
+//     if err != nil {
+//         log.Fatalln("Unable to execute workflow", err)
+//     }
 
-    log.Println("Started workflow", "WorkflowIDtest", we.GetID(), "RunID667877", we.GetRunID())
-}
+//     log.Println("Started workflow", "WorkflowIDtest", we.GetID(), "RunID667877", we.GetRunID())
+// }
 
 func TerraformApply() error {
 cmd := exec.Command("terraform", "apply", "-auto-approve", "tfplan")
