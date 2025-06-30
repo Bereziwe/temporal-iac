@@ -36,7 +36,7 @@ import (
 
 func TerraformApply() error {
 cmd := exec.Command("terraform", "apply", "-auto-approve", "tfplan")
-cmd.Dir = "github.com/Bereziwe/temporal-iac/terraform"
+cmd.Dir = "temporal-iac/terraform"
 return cmd.Run()
 }
 
